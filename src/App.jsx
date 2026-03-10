@@ -25,7 +25,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/ConnectHub/">
       <Routes>
         <Route path="/" element={<Layout toggleTheme={toggleTheme} isDark={isDark} />}>
           <Route index element={<Home />} />

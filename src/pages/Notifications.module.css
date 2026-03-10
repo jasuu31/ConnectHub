@@ -1,0 +1,57 @@
+.notificationItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+:global(html.dark) .notificationItem {
+  border-bottom-color: #374151;
+}
+
+.notificationItem:hover {
+  background-color: var(--bg-hover, #f3f4f6);
+}
+
+:global(html.dark) .notificationItem:hover {
+  background-color: #374151;
+}
+
+.notificationItem.unread {
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+:global(html.dark) .notificationItem.unread {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #e5e7eb;
+}
+
+:global(html.dark) .avatar {
+  background-color: #374151;
+}
+
+.content {
+  flex: 1;
+}
+
+.content p {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.time {
+  font-size: 0.8rem;
+  color: var(--primary-color, #3b82f6);
+  font-weight: 500;
+}

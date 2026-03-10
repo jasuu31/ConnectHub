@@ -1,0 +1,165 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
+  background-color: var(--bg-surface, #ffffff);
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+:global(html.dark) .header {
+  background: rgba(31, 41, 55, 0.85);
+  border-bottom-color: var(--border-color, #374151);
+}
+
+.logo h2 {
+  margin: 0;
+  color: var(--primary-color, #3b82f6);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.searchContainer {
+  flex: 1;
+  max-width: 400px;
+  margin: 0 2rem;
+}
+
+.searchInputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  color: var(--text-secondary, #9ca3af);
+}
+
+.searchBar {
+  width: 100%;
+  padding: 0.6rem 1.2rem 0.6rem 2.5rem;
+  border-radius: 20px;
+  border: 1px solid var(--border-color, #e5e7eb);
+  background-color: var(--bg-subtle, #f3f4f6);
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--text-primary, #111827);
+}
+
+:global(html.dark) .searchBar {
+  background-color: var(--bg-subtle, #374151);
+  border-color: #4b5563;
+  color: #f9fafb;
+}
+
+.searchBar:focus {
+  outline: none;
+  border-color: var(--primary-color, #3b82f6);
+  background-color: var(--bg-surface, #ffffff);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  transform: translateY(-1px);
+}
+
+:global(html.dark) .searchBar:focus {
+  background-color: #1f2937;
+}
+
+.nav {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.themeToggleBtn {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: var(--text-secondary, #4b5563);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:global(html.dark) .themeToggleBtn {
+  color: #fbbf24; 
+}
+
+.themeToggleBtn:hover {
+  background-color: var(--bg-hover, #f3f4f6);
+  transform: rotate(15deg) scale(1.1);
+}
+
+:global(html.dark) .themeToggleBtn:hover {
+  background-color: #374151;
+}
+
+.divider {
+  width: 1px;
+  height: 24px;
+  background-color: var(--border-color, #e5e7eb);
+  margin: 0 0.5rem;
+}
+
+:global(html.dark) .divider {
+  background-color: #4b5563;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 50%;
+  color: var(--text-secondary, #4b5563);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+:global(html.dark) .iconBtn {
+  color: #9ca3af;
+}
+
+.iconBtn:hover {
+  background-color: var(--bg-hover, #f3f4f6);
+  color: var(--primary-color, #3b82f6);
+  transform: scale(1.05);
+}
+
+:global(html.dark) .iconBtn:hover {
+  background-color: #374151;
+  color: #60a5fa;
+}
+
+.iconBtn:active {
+  transform: scale(0.95);
+}
+
+.iconBtn.active {
+  color: var(--primary-color, #3b82f6);
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+:global(html.dark) .iconBtn.active {
+  color: #60a5fa;
+  background-color: rgba(96, 165, 250, 0.1);
+}

@@ -1,0 +1,98 @@
+.messageItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+:global(html.dark) .messageItem {
+  border-bottom-color: #374151;
+}
+
+.messageItem:hover {
+  background-color: var(--bg-hover, #f3f4f6);
+}
+
+:global(html.dark) .messageItem:hover {
+  background-color: #374151;
+}
+
+.messageItem.unread {
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+:global(html.dark) .messageItem.unread {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.avatarContainer {
+  position: relative;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #e5e7eb;
+}
+
+:global(html.dark) .avatar {
+  background-color: #374151;
+}
+
+.onlineIndicator {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 14px;
+  height: 14px;
+  background-color: #10b981;
+  border: 2px solid var(--bg-surface, #ffffff);
+  border-radius: 50%;
+}
+
+:global(html.dark) .onlineIndicator {
+  border-color: #1f2937;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.name {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  font-size: 1rem;
+}
+
+.time {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.preview {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.unread .preview {
+  color: var(--text-primary);
+  font-weight: 500;
+}

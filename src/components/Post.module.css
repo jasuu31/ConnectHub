@@ -1,0 +1,163 @@
+.post {
+  display: flex;
+  padding: 1rem 1rem 0.5rem 1rem;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+:global(html.dark) .post {
+  border-bottom-color: #2f3336;
+}
+
+.post:hover {
+  background-color: var(--bg-hover, rgba(0, 0, 0, 0.03));
+}
+
+.avatarColumn {
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f3f4f6;
+  object-fit: cover;
+}
+
+.contentColumn {
+  flex: 1;
+  min-width: 0;
+}
+
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.authorInfo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.name {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.name:hover {
+  text-decoration: underline;
+}
+
+.handle, .timestamp, .dot {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.moreBtn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.moreBtn:hover {
+  color: var(--primary-color);
+  background-color: rgba(29, 155, 240, 0.1);
+}
+
+.postContent {
+  margin-bottom: 0.5rem;
+}
+
+.postContent p {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.imageContainer {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-color, #e5e7eb);
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.postImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 500px;
+}
+
+.postActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-secondary);
+  margin-top: 0.75rem;
+}
+
+.actionBtn {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.iconWrapper {
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+  margin-right: 0.25rem;
+}
+
+/* Hover Effects */
+.replyBtn:hover { color: #1d9bf0; }
+.replyBtn:hover .iconWrapper { background-color: rgba(29, 155, 240, 0.1); }
+
+.retweetBtn:hover, .retweeted { color: #00ba7c; }
+.retweetBtn:hover .iconWrapper { background-color: rgba(0, 186, 124, 0.1); }
+
+.likeBtn:hover, .liked { color: #f91880; }
+.likeBtn:hover .iconWrapper { background-color: rgba(249, 24, 128, 0.1); }
+
+.viewBtn:hover { color: #1d9bf0; }
+.viewBtn:hover .iconWrapper { background-color: rgba(29, 155, 240, 0.1); }
+
+.shareBtn:hover { color: #1d9bf0; }
+.shareBtn:hover .iconWrapper { background-color: rgba(29, 155, 240, 0.1); }
+
+.rightActions {
+  display: flex;
+  gap: 0.5rem;
+}
